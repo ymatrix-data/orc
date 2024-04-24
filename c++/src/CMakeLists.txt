@@ -199,7 +199,7 @@ if(BUILD_ENABLE_AVX512)
     BpackingAvx512.cc)
 endif(BUILD_ENABLE_AVX512)
 
-add_library (orc STATIC ${SOURCE_FILES})
+add_library (orc ${SOURCE_FILES})
 
 target_link_libraries (orc
   orc::protobuf
