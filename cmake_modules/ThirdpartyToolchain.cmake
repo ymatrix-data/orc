@@ -81,7 +81,7 @@ else ()
   endif ()
 
   ExternalProject_Add (snappy_ep
-    URL "https://github.com/google/snappy/archive/${SNAPPY_VERSION}.tar.gz"
+    URL "${CMAKE_SOURCE_DIR}/c++/libs/snappy/${SNAPPY_VERSION}.tar.gz"
     CMAKE_ARGS ${SNAPPY_CMAKE_ARGS}
     ${THIRDPARTY_LOG_OPTIONS}
     BUILD_BYPRODUCTS "${SNAPPY_STATIC_LIB}")
@@ -133,7 +133,7 @@ else ()
   endif ()
 
   ExternalProject_Add (zlib_ep
-    URL "https://zlib.net/fossils/zlib-${ZLIB_VERSION}.tar.gz"
+    URL "${CMAKE_SOURCE_DIR}/c++/libs/zlib/zlib-${ZLIB_VERSION}.tar.gz"
     CMAKE_ARGS ${ZLIB_CMAKE_ARGS}
     ${THIRDPARTY_LOG_OPTIONS}
     BUILD_BYPRODUCTS "${ZLIB_STATIC_LIB}")
@@ -192,7 +192,7 @@ else ()
   endif()
 
   ExternalProject_Add(zstd_ep
-          URL "https://github.com/facebook/zstd/archive/v${ZSTD_VERSION}.tar.gz"
+          URL "${CMAKE_SOURCE_DIR}/c++/libs/zstd/v${ZSTD_VERSION}.tar.gz"
           ${ZSTD_CONFIGURE}
           ${THIRDPARTY_LOG_OPTIONS}
           BUILD_BYPRODUCTS ${ZSTD_STATIC_LIB})
@@ -244,7 +244,7 @@ else ()
   endif()
 
   ExternalProject_Add(lz4_ep
-    URL "https://github.com/lz4/lz4/archive/v${LZ4_VERSION}.tar.gz"
+    URL "${CMAKE_SOURCE_DIR}/c++/libs/lz4/v${LZ4_VERSION}.tar.gz"
     ${LZ4_CONFIGURE}
     ${THIRDPARTY_LOG_OPTIONS}
     BUILD_BYPRODUCTS ${LZ4_STATIC_LIB})
